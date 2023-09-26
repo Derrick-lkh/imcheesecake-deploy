@@ -111,7 +111,7 @@ main {
     right: 0;
     width: 50%;
     height: 100%;
-    background-image: url("../images/Right-bg.png");
+    background-image: url("./images/Right-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     z-index: -1;
@@ -123,7 +123,7 @@ main {
     left: 0;
     width: 50%;
     height: 100%;
-    background-image: url("../images/Left-bg.png");
+    background-image: url("./images/Left-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     z-index: -1;
