@@ -100,7 +100,7 @@ main {
   max-height: 100%;
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 500px) {
   .banner {
     height: 100vh;
   }
