@@ -13,9 +13,15 @@
 .content-section {
   margin-top: 10rem;
 }
+@media screen and (max-width: 1024px) {
+  .content-section {
+    margin-top: 5rem;
+  }
+}
 .content-section .page-header {
   display: inline-block;
-  font-size: calc(clamp(3.25em, 7vw, 8em) * 0.8);
+  font-size: calc(clamp(3em, 7vw, 8em) * 0.8);
+  line-height: 1.2;
   margin-bottom: 10rem;
   font-weight: 500;
 }
@@ -33,8 +39,12 @@
 }
 @media screen and (max-width: 1024px) {
   .project-details {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .project-details {
+    grid-template-columns: 1fr;
   }
 }
 .project-details .details-container .details-header {
@@ -60,6 +70,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .page-showcase .showcase-container {
+    flex-direction: column;
+  }
 }
 .page-showcase .showcase-container .media-container {
   flex: 1;
@@ -93,6 +108,11 @@
   position: relative;
   line-height: 3.2rem;
 }
+@media screen and (max-width: 1024px) {
+  .page-showcase .showcase-container .text-container .highlight {
+    margin-bottom: 1rem;
+  }
+}
 .page-showcase .showcase-container .text-container .highlight:after {
   content: "";
   position: absolute;
@@ -104,8 +124,8 @@
 }
 @media screen and (max-width: 1024px) {
   .page-showcase .showcase-container .text-container p {
-    font-size: 1.3rem;
-    line-height: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
   }
   .page-showcase .showcase-container .text-container .highlight {
     font-size: 2rem;
