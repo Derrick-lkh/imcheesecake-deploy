@@ -64,6 +64,21 @@ main {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit color from the parent element */
+  outline: none;
+  /* Remove outline on focus */
+  background: none;
+  /* Remove background */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -114,6 +129,12 @@ main {
 @media screen and (min-width: 1024px) {
   .main-container {
     padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-container {
+    padding: 3rem 0;
   }
 }
 
@@ -305,6 +326,12 @@ footer {
   padding-top: 5rem;
 }
 
+@media screen and (max-width: 1024px) {
+  footer {
+    padding: 1rem;
+  }
+}
+
 footer h2 {
   color: white;
   font-size: 5rem;
@@ -313,6 +340,12 @@ footer h2 {
 
 footer h2 span {
   display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  footer h2 {
+    font-size: 3rem;
+  }
 }
 
 footer .contact-section {
@@ -352,7 +385,13 @@ footer .contact-details .contact-item .square-btn {
   border-color: #38393C;
   padding: 1rem 2.5rem;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  footer .contact-details .contact-item .square-btn {
+    padding: 1rem 1.5rem;
+  }
 }
 
 footer .footer-statement {
@@ -396,16 +435,22 @@ footer .footer-statement {
   transition: 0.3s ease all;
 }
 
-.project-showcase .active, .project-showcase-label .active {
-  color: rgba(0, 0, 0, 0.5);
+@media screen and (max-width: 1024px) {
+  .project-showcase .project-item, .project-showcase-label .project-item {
+    padding: 3rem;
+  }
 }
 
-.project-showcase .active p, .project-showcase-label .active p {
-  transform: translateX(20px);
-}
-
-.project-showcase .active span, .project-showcase-label .active span {
-  transform: translateX(-20px);
+@media screen and (min-width: 1024px) {
+  .project-showcase .active, .project-showcase-label .active {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .project-showcase .active p, .project-showcase-label .active p {
+    transform: translateX(20px);
+  }
+  .project-showcase .active span, .project-showcase-label .active span {
+    transform: translateX(-20px);
+  }
 }
 
 .project-showcase .project-item:last-child, .project-showcase-label .project-item:last-child {
@@ -427,6 +472,12 @@ footer .footer-statement {
 @media screen and (max-width: 425px) {
   .project-showcase-label .project-item {
     padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project-showcase-label {
+    display: none;
   }
 }
 

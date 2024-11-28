@@ -5,16 +5,15 @@ $( document ).ready(function() {
 
     // Horizontal scroll - Showcase
     $(window).scroll(function(e){
-        console.log(e.pageX)
-        var relative_scroll = ($(window).scrollTop() - $(".showcase-gallery-section").offset().top + $(".showcase-gallery-section").height()) * 0.1
-        console.log(relative_scroll)
-        $(".animate-row-1").css({
-            // transform: "translateX(" +  relative_scroll + "px)"
-            transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0," + relative_scroll + ", 0, 0, 1)"
-        })
-        $(".animate-row-2").css({
-            transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0," + (relative_scroll * -1) + ", 0, 0, 1)"
-        })
+        if ($(window).width() > 1024) {
+            var relative_scroll = ($(window).scrollTop() - $(".showcase-gallery-section").offset().top + $(".showcase-gallery-section").height()) * 0.1
+            $(".animate-row-1").css({
+                transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0," + relative_scroll + ", 0, 0, 1)"
+            })
+            $(".animate-row-2").css({
+                transform: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0," + (relative_scroll * -1) + ", 0, 0, 1)"
+            })
+        }
     })
 
     function showcase_popup(e){
